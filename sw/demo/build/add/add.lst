@@ -1,0 +1,7 @@
+; RISC16 Assembler — Listing
+; line   addr     hex                 source
+; ----   ------   ------------------  -----------------------------
+     1   0x0000   9103                lli r1, 3
+     2   0x0001   9206                lli r2, 6
+     3   0x0002   0321                add r3, r2, r1
+     4   0x0003   E000                bz  r0, 0

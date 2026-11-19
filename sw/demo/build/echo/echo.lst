@@ -1,0 +1,15 @@
+; RISC16 Assembler — Listing
+; line   addr     hex                 source
+; ----   ------   ------------------  -----------------------------
+     1   0x0000   9100                lli r1, 0x00
+     2   0x0001   8140                lhi r1, 0x40       ; r1 = 0x4000 (Alamat Layar TTY)
+     4   0x0002   9201                lli r2, 0x01
+     5   0x0003   8240                lhi r2, 0x40       ; r2 = 0x4001 (Status Keyboard)
+     7   0x0004   9302                lli r3, 0x02
+     8   0x0005   8340                lhi r3, 0x40       ; r3 = 0x4002 (Data Keyboard)
+    10   0x0006                       loop:
+    11   0x0006   6620                lw  r6, (r2)
+    12   0x0007   E6FF                bz  r6, -1         ; Tunggu sampai ada tombol yang ditekan
+    14   0x0008   6630                lw  r6, (r3)
+    15   0x0009   5016                sw  r6, (r1)       ; Ambil karakter dan langsung cetak ke TTY
+    17   0x000A   E0FC                bz  r0, -4         ; Ulangi loop dari atas

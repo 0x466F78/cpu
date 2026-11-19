@@ -1,0 +1,17 @@
+RISC16 Memory Map
+=================
+
+Program ROM (4K words):
+  0x0000 - 0x0006  digunakan  (7 words)
+  0x0007 - 0x0FFF  kosong
+
+Data RAM (4K words):
+  0x2000 - 0x2FFF
+
+I/O (memory-mapped):
+  0x4000  TTY Output   (write)
+  0x4001  KBD Status   (read)
+  0x4002  KBD Data     (read, auto-clear)
+
+Symbols:
+  (kosong)
