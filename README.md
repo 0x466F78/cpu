@@ -1,11 +1,12 @@
 # CPU
 
-Prosesor sederhana yang dirancang khusus untuk tujuan **edukasi** dan **pembelajaran arsitektur komputer**, dibangun menggunakan **simulator rangkaian digital**.
+Prosesor 16-bit di **Logisim-evolution** sebagai fondasi sebelum mendalami **RISC-V**.
 
-- **RISC 16-bit** — Kumpulan instruksi ringkas, seragam, dan berukuran jalur data 16-bit.
-- **Harvard** — Pemisahan fisik antara memori instruksi (**ROM**) dan memori data (**RAM**) untuk menghindari konflik jalur akses.
-- **Single-Cycle** — Setiap instruksi dieksekusi sepenuhnya dalam satu siklus *clock*.
-- **8 Register** — Register internal **`r0`** hingga **`r7`** berukuran 16-bit untuk penyimpanan data sementara.
+- **ISA:** 16-bit RISC — Instruksi ringkas, seragam, dan berjalur data 16-bit.
+- **Eksekusi:** *Single-Cycle* — Satu instruksi selesai dalam satu siklus *clock*.
+- **Memori (Harvard):** **ROM** (4K × 16-bit) dan **RAM** (4K × 16-bit).
+- **Register:** 8 register *general-purpose* 16-bit (`r0`–`r7`).
+- **I/O (*Memory-Mapped*):** *Output* layar TTY dan *input* *keyboard*.
 
 ## 1. Format Instruksi
 
